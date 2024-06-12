@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Navbar from './Navbar.jsx';
 
 const App = () => {
   const [description, setDescription] = useState('');
@@ -21,7 +22,9 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-4">
+    <div>
+      <Navbar />
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-4 pt-5">
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold mb-4 text-center">Submit Data</h2>
         <div className="mb-4">
@@ -55,6 +58,7 @@ const App = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
